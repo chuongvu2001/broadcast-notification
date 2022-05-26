@@ -23,7 +23,7 @@ export default {
             .notification((notification) => {
                 // console.log(props.user.id);
                 notifications.value.push(notification.notification);
-                console.log(notification.notification.data);
+                // console.log(notification.notification.data);
                 swal({
                     title: "Like!",
                     text: `Username: ${notification.notification.data.user_name} - Like Post:  ${notification.notification.data.post_title}`,
@@ -34,7 +34,6 @@ export default {
         return {
             notifications
         }
-
     }
 }
 </script>

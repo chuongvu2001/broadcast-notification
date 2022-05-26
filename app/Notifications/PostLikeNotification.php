@@ -64,8 +64,6 @@ class PostLikeNotification extends Notification implements ShouldBroadcast
                 "post_title" => $this->post->title,
             ]
         ];
-
-//        dd($notification);
         return new BroadcastMessage([
             'notification' => $notification
         ]);
