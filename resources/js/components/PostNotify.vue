@@ -19,9 +19,8 @@ export default {
             notifications.value = props.user_notifications
         })
 
-        window.Echo.channel('post_like' + props.user.id)
+        Echo.private('App.Models.User.'+ props.user.id)
             .notification((notification) => {
-                // console.log(props.user.id);
                 notifications.value.push(notification.notification);
                 // console.log(notification.notification.data);
                 swal({

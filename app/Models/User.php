@@ -46,9 +46,4 @@ class User extends Authenticatable
     {
         $this->hasMany(Post::class);
     }
-
-    public function receivesBroadcastNotificationsOn()
-    {
-        return "post_like" . $this->id;
-    }
 }
